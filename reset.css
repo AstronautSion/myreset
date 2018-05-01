@@ -1,8 +1,13 @@
 @charset "utf-8";
 /* Common */ 
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{ margin:0;padding:0;border:0;outline:0;vertical-align:middle;background:transparent;}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
-body,input,textarea,select,button,table{font-size:14px;font-family:'Noto Sans Korean','Nanum Gothic','굴림',sans-serif;}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,
+b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,
+hgroup,menu,nav,section,summary,time,mark,audio,video{
+    margin:0;padding:0;border:0;outline:0;vertical-align:middle;background:transparent;
+    line-height:1;font-size:14px;font-family:'Noto Sans KR','Nanum Gothic','굴림',sans-serif;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,small{display:block;}
+input,textarea,select,button,table{font-size:14px; line-height:1;}
 blockquote,q{quotes:none;}
 mark{background-color:#ff9;color:#333;font-style:italic;font-weight:bold;}
 del{text-decoration: line-through;}
@@ -14,4 +19,5 @@ em,address{font-style:normal;}
 table{border-collapse:collapse;border-spacing:0;} 
 a{text-decoration:none;color:#333;vertical-align:middle;} 
 a:hover,a:active,a:focus{text-decoration:underline;}
-.blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0;}
+.blind{overflow:hidden;position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;margin:-1px;border:0;padding:0;}
+caption.blind{position:static;}

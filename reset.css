@@ -13,7 +13,7 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 img,fieldset{border:0;vertical-align:middle;} 
 ul,ol{list-style:none;}
 em,address{font-style:normal;}
-table{border-collapse:collapse;border-spacing:0;} 
+table{border-collapse:collapse;border-spacing:0;table-layout:fixed;}
 a{text-decoration:none;color:#333;vertical-align:middle;} 
 a:hover,a:active,a:focus{text-decoration:underline;}
 .blind{overflow:hidden;position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;margin:-1px;border:0;padding:0;}

@@ -1,165 +1,86 @@
-/* ----------------------------------------------------------------------------------------------------
-Super Form Reset
-A couple of things to watch out for:
-- IE8: If a text input doesn't have padding on all sides or none the text won't be centered.
-- The default border sizes on text inputs in all UAs seem to be slightly different. You're better off using custom borders.
-- You NEED to set the font-size and family on all form elements
-- Search inputs need to have their appearance reset and the box-sizing set to content-box to match other UAs
-- You can style the upload button in webkit using ::-webkit-file-upload-button
-- ::-webkit-file-upload-button selectors can't be used in the same selector as normal ones. FF and IE freak out.
-- IE: You don't need to fake inline-block with labels and form controls in IE. They function as inline-block.
-- By turning off ::-webkit-search-decoration, it removes the extra whitespace on the left on search inputs
-----------------------------------------------------------------------------------------------------*/
-
+/* Form reset
+-----------------------------------------------*/
 input,
 label,
 select,
 button,
-textarea
-{
-	margin:0;
-	border:0;
-	padding:0;
-	display:inline-block;
-	vertical-align:middle;
-	white-space:normal;
-	background:none;
-	line-height:1;
-	
-	/* Browsers have different default form fonts */
-	font-size:13px;
-	font-family:Arial;
-}
-
-/* Remove the stupid outer glow in Webkit */
-input:focus
-{
-	outline:0;
-}
-
-/* Box Sizing Reset
------------------------------------------------*/
-
-/* All of our custom controls should be what we expect them to be */
+textarea{margin:0; border:0; padding:0; display:inline-block; vertical-align:middle; white-space:normal; background:none; line-height:1; font-size:1rem;}
+input:focus,
+textarea:focus{outline:0;}
 input,
-textarea
-{
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
-}
-
-/* These elements are usually rendered a certain way by the browser */
+textarea,
 button,
 input[type=reset],
 input[type=button],
 input[type=submit],
 input[type=checkbox],
 input[type=radio],
-select
-{
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
-}
-
-/* Text Inputs
------------------------------------------------*/
-
-input[type=date],
-input[type=datetime],
-input[type=datetime-local],
-input[type=email],
-input[type=month],
-input[type=number],
-input[type=password],
-input[type=range],
-input[type=search],
-input[type=tel],
-input[type=text],
-input[type=time],
-input[type=url],
-input[type=week]
-{
-}
-
-/* Button Controls
------------------------------------------------*/
-
-input[type=checkbox],
-input[type=radio]
-{
-	width:13px;
-	height:13px;
-}
-
-/* File Uploads
------------------------------------------------*/
-
-input[type=file]
-{
-
-}
+select{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+select[multiple]{ vertical-align:top;}
+::-webkit-file-upload-button{ padding:0; border:0; background:none;}
 
 /* Search Input
 -----------------------------------------------*/
+input[type=search]{-webkit-appearance:textfield; -webkit-box-sizing:content-box;}
+::-webkit-search-decoration{display:none;}
 
-/* Make webkit render the search input like a normal text field */
-input[type=search]
-{
-	-webkit-appearance:textfield;
-	-webkit-box-sizing:content-box;
-}
-
-/* Turn off the recent search for webkit. It adds about 15px padding on the left */
-::-webkit-search-decoration
-{
-	display:none;
-}
-
-/* Buttons
+/* Text Inputs
 -----------------------------------------------*/
-
-button,
-input[type="reset"],
-input[type="button"],
-input[type="submit"]
-{
-	/* Fix IE7 display bug */
-	overflow:visible;
-	width:auto;
+input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=number],input[type=password],input[type=range],input[type=search],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week]{
+	display:block; width:100%; height:2.5rem; padding:0 .75rem; border:1px solid #ddd;
 }
 
-/* IE8 and FF freak out if this rule is within another selector */
-::-webkit-file-upload-button
-{	
-	padding:0;
-	border:0;
-	background:none;
-}
+input[type=text],input[type=password]{background-repeat: no-repeat; background-position: right 1rem center; background-size: 0.75rem;}
+input[type=text].is-true,input[type=password].is-true{border-color:#2eec96; background-image:url("data:image/svg+xml,%3Csvg width='45px' height='34px' viewBox='0 0 45 34' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-56.000000, -59.000000%29' fill='%232EEC96'%3E%3Cpolygon points='70.1468531 85.8671329 97.013986 59 100.58042 62.5664336 70.1468531 93 56 78.8531469 59.5664336 75.2867133'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");}
+input[type=text].is-false,input[type=password].is-false{border-color:#f44336; background-image:url("data:image/svg+xml,%3Csvg width='30px' height='30px' viewBox='0 0 30 30' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-128.000000, -59.000000%29' fill='%23F44336'%3E%3Cpolygon points='157.848404 61.9920213 145.980053 73.8603723 157.848404 85.7287234 154.856383 88.7207447 142.988032 76.8523936 131.119681 88.7207447 128.12766 85.7287234 139.996011 73.8603723 128.12766 61.9920213 131.119681 59 142.988032 70.8683511 154.856383 59'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");}
+input[type=text]:disabled,input[type=password]:disabled{background-color:#f0f0f0; cursor: not-allowed;}
 
 /* Textarea
 -----------------------------------------------*/
+textarea{vertical-align:top; overflow:auto;}
 
-textarea 
-{
-	/* Move the label to the top */
-	vertical-align:top;
-	
-	/* Turn off scroll bars in IE unless needed */
-	overflow:auto;
-}
-
-/* Selects
+/* Selects custom
 -----------------------------------------------*/
+select{}
 
-select
-{
+/* form checkbox / radio cusotm
+-----------------------------------------------*/
+.form-check{position:relative; min-width:20px; height:20px; display:inline-block; box-sizing:border-box; vertical-align:middle;}
+.form-check label:before{height:20px; width:20px;}
+.form-check label{cursor:pointer; font-size:1rem; font-weight:normal; vertical-align:middle;}
+.form-check label:before, 
+.form-check label:after{content:""; position:absolute; left:0; top:0;}
+.form-check label:before{width:20px; background:#fff; border:1px solid #ddd; border-radius:2px; cursor:pointer; transition:all .3s; box-sizing:border-box;}
+.form-check input{outline:0; margin-right:0px; width:20px; height:20px; visibility:hidden;}
+.form-check input:checked + label:before{background:#2637ca; border:none; box-sizing:border-box; outline:0;}
+.form-check input:disabled + label:before{background-color:#ddd; border:none;}
+.form-check input:disabled + label:after{border-color:#bbb;}
+.form-check.checkbox label:before{border-radius:2px;}
+.form-check.radio label:before{border-radius:50%;}
+.form-check.checkbox input + label:after{-webkit-transform:rotate(-45deg); transform:rotate(-45deg); top:5px; left:4px; width:12px; height:6px; border:2px solid #ddd; border-top-style:none; border-right-style:none; box-sizing:border-box;}
+.form-check.radio input + label:after{top:7px; left:7px; width:6px; height:6px; background-color:#ddd; border-radius:50%; box-sizing:border-box;}
+.form-check.checkbox input:checked + label:after{border-color:#fff;}
+.form-check.radio input:checked + label:after{background-color:#fff;}
 
-}
+/* switch cusotm
+-----------------------------------------------*/
+.switch{position:relative; display:inline-block; padding-left:35px; margin:4px 0; font-size:1rem;}
+.switch input[type=checkbox]{height:0; width:0; visibility:hidden;}
+.switch label {position:absolute; top:0; left:0; transition:all .3s ease-in-out; cursor:pointer; text-indent:-9999px; width:35px; height:15px; background-color:#ddd; display:block; border-radius:2em;}
+.switch label:after {content:''; position:absolute; top:-2px; left:-2px; width:19px; height:19px; background-color:#fff; border-radius:50%; transition:0.3s; box-shadow:0 0 5px rgba(0, 0, 0, 0.4);}
+.switch input[type=checkbox]:checked+label {transition:all .4s ease-in-out; background-color:#2637ca;}
+.switch input[type=checkbox]:checked+label:after {left:37px; -webkit-transform:translateX(-100%); transform:translateX(-100%);}
+.switch input[type=checkbox]:disabled+label:after {background-color:#ddd;}
+.switch input[type=checkbox]:disabled+label {background-color:#bbb;}
 
-select[multiple] 
-{
-	/* Move the label to the top */
-	vertical-align:top;
-}
+/* File Uploads
+-----------------------------------------------*/
+input[type=file]{}
+
+
+/* Buttons
+-----------------------------------------------*/
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"]{overflow:visible; width:auto;}

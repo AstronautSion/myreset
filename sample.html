@@ -5,27 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./form.css">
+    <style>
+        .layout{width:50%; margin: 1em auto;}
+        .layout .layout-tit{font-size:2em; padding:2em 0 1em 0;}
+    </style>
 </head>
 <body>
+<div class="layout">
+    <h3 class="layout-tit">Checkbox</h3>
     <div class="form-check checkbox">
-        <input name="c1" id="c1" type="checkbox">
-        <label for="c1">asdfasdfasdfsdf</label>
+            <input name="c1" id="c1" type="checkbox" checked>
+            <label for="c1">Checkbox Sample</label>
+        </div>
+    <div class="form-check checkbox">
+        <input name="c2" id="c2" type="checkbox">
+        <label for="c2">Checkbox Sample</label>
+    </div>
+    <div class="form-check checkbox">
+        <input name="c3" id="c3" type="checkbox" disabled>
+        <label for="c3">Checkbox :disabled</label>
+    </div>
+</div>
+<div class="layout">
+    <h3 class="layout-tit">Radio</h3>
+    <div class="form-check radio">
+        <input type="radio" name="radio" id="r1" checked>
+        <label for="r1">Radio sample1</label>
     </div>
     <div class="form-check radio">
-        <input type="radio" name="r1" id="r1">
-        <label for="r1">asdfasdfasdfsdf</label>
+        <input type="radio" name="radio" id="r2">
+        <label for="r2">Radio sample2</label>
     </div>
-
+    <div class="form-check radio">
+        <input type="radio" name="radio" id="r3" disabled>
+        <label for="r3">Radio :disabled</label>
+    </div>
+    
+</div>
+<div class="layout">
+    <h3 class="layout-tit">Switch</h3>
     <div class="switch">
-        <input type="checkbox" id="s1">
-        <label for="s1">스위치 1</label>
-        dkssudgktpdyusd
+        <input type="checkbox" id="s1" checked>
+        <label for="s1">switch</label>
+        Switch sample
     </div>
-    <input type="text" disabled>
-    <input class="is-true" type="text">
-    <input class="is-false" type="text">
+    <div class="switch">
+        <input type="checkbox" id="s2">
+        <label for="s2">switch</label>
+        Switch sample
+    </div>
+    <div class="switch">
+        <input type="checkbox" id="s3" disabled>
+        <label for="s3">switch</label>
+        Switch :disabled
+    </div>
+</div>
 
+
+<div class="layout">
+    <h3 class="layout-tit">Input</h3>
+    <label class="input-label" for="">Input basic</label>
+    <input type="text">
+</div>
+<div class="layout">
+    <input type="password">
+    <span class="help-text">*password를 입력해주세요.</span>
+</div>
+<div class="layout">
+    <input class="is-true" type="text">
+</div>
+<div class="layout">
+    <input class="is-false" type="text">
+</div>
+<div class="layout">
+    <input type="text" disabled>
+</div>
+<div class="layout">
+    <input type="number" min="1" max="10">
+</div>
+
+<script src="./helpers.js"></script>
+<script src="./form.js"></script>
 </body>
 </html>

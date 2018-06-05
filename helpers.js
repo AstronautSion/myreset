@@ -78,4 +78,4 @@
     // Object.seal(global.y9);
     // Object.freeze(global.y9);
 
-})(window, window.document);
+})(window, window.document); 

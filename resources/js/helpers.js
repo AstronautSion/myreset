@@ -4,13 +4,13 @@
     function els(selector, context) {
         if (typeof selector !== 'string' || selector.trim().length === 0) { return null; }
         context = !context ? document : context.nodeType === 1 ? context : el(String(context));
-        return Array.prototype.slice.call(context.querySelectorAll(selector));
+        return context.querySelectorAll(selector);
     }
 
     function el(selector, context) {
         if (typeof selector !== 'string' || selector.trim().length === 0) { return null; }
         context = !context ? document : context.nodeType === 1 ? context : el(String(context));
-        return Array.prototype.slice.call(context.querySelector(selector));
+        return context.querySelector(selector);
     }
 
     function hide(selector){ //변수 (배열) 

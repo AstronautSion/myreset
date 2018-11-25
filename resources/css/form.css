@@ -21,7 +21,7 @@ select[multiple]{ vertical-align:top;}
 
 /* Search Input
 -----------------------------------------------*/
-input[type=search]{-webkit-appearance:textfield; -webkit-box-sizing:content-box;}
+input[type=search]{-webkit-appearance:textfield; box-sizing:content-box; -webkit-box-sizing:content-box;}
 ::-webkit-search-decoration{display:none;}
 
 /* Text Inputs
@@ -29,14 +29,6 @@ input[type=search]{-webkit-appearance:textfield; -webkit-box-sizing:content-box;
 input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=number],input[type=password],input[type=range],input[type=search],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week]{
 	display:block; width:100%; height:2.5rem; padding:0 .75rem; border:1px solid #ddd;
 }
-
-input{background-repeat: no-repeat; background-position: right 1rem center; background-size: 0.75rem;}
-input.is-true{border-color:#05d25b; background-image:url("data:image/svg+xml,<svg width='45px' height='34px' viewBox='0 0 45 34' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g transform='translate(-56.000000, -59.000000)' fill='#05d25b'><polygon points='70.1468531 85.8671329 97.013986 59 100.58042 62.5664336 70.1468531 93 56 78.8531469 59.5664336 75.2867133'></polygon></g></g></svg>%0A");}
-input.is-false{border-color:#f44336; background-image:url("data:image/svg+xml,<svg width='30px' height='30px' viewBox='0 0 30 30' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g transform='translate(-128.000000, -59.000000)' fill='#F44336'><polygon points='157.848404 61.9920213 145.980053 73.8603723 157.848404 85.7287234 154.856383 88.7207447 142.988032 76.8523936 131.119681 88.7207447 128.12766 85.7287234 139.996011 73.8603723 128.12766 61.9920213 131.119681 59 142.988032 70.8683511 154.856383 59'></polygon></g></g></svg>%0A");}
-input:disabled{background-color:#f8f8f8; cursor: not-allowed;}
-
-.input-label{display:block; font-size:1.1rem; font-weight:400; padding-bottom:.5rem;}
-.help-text{display:block; margin-top: 0.7rem; font-size:0.8rem; font-weight:normal;}
 /* .dynamic-input-label{} */
 
 

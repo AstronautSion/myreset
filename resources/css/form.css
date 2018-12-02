@@ -35,10 +35,9 @@ input[type=date],input[type=datetime],input[type=datetime-local],input[type=emai
 /* Textarea
 -----------------------------------------------*/
 textarea{vertical-align:top; min-height:5rem; overflow:auto; resize:none;}
-.textarea textarea{width:100%;}
-.textarea{width:100%;}
+.textarea textarea{width:100%; height:100%; padding:.75rem; box-sizing:border-box; line-height:1.6;}
+.textarea{width:100%; border:1px solid #ddd; box-sizing:border-box;}
 .textarea:after{content:''; display:block; clear:both;}
-.textarea .textarea-num{float:right;}
 
 /* Selects custom
 -----------------------------------------------*/

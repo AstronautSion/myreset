@@ -19,6 +19,6 @@ a{text-decoration:none;color:#333;vertical-align:middle;}
 a:hover,a:active,a:focus{text-decoration:underline;}
 .blind{overflow:hidden;position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;margin:-1px;border:0;padding:0;}
 caption.blind{position:static;}
-.cf:after{content:'';display:block;clear:both;}
-.fl{float:left;}
-.fr{float:right;}
+.clearfix:after{content:'';display:block;clear:both;}
+.float-left{float:left;}
+.float-right{float:right;}
